@@ -1,5 +1,6 @@
 import random
-def password_generator(length):
+def password_generator():
+    length = int(input("How mnay characters would you like your password to be:"))
     my_password = ""
     for i in range(length):
         num_or_letter = random.randint(0,100)
@@ -20,7 +21,7 @@ def password_generator(length):
             number = number + switch - num_or_letter
             number = number // 3
             number = number ** 2
-            if number >= 10:
+            while number >= 10:
                 number = number // 10
             to_add = str(number)
         
@@ -30,4 +31,4 @@ def password_generator(length):
 
 #starter code 
 
-print(password_generator(5))
+print(password_generator())

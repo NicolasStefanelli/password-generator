@@ -20,6 +20,8 @@ def password_generator(length):
             number = number + switch - num_or_letter
             number = number // 3
             number = number ** 2
+            if number >= 10:
+                number = number // 10
             to_add = str(number)
         
         my_password = my_password + to_add
